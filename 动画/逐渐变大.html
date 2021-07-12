@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./images">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>hhh</title>
+        <style>
+            .html{
+                /* 设置当前网页的视距为800px，人眼距离网页的距离 */
+                 perspective: 800px;
+            }
+
+            body{
+                border: 1px solid pink;
+                background-color: powderblue;
+            }
+
+            .box1{
+                height: 200px;
+                width: 200px;
+                background-color: purple;
+                margin: 200px auto;
+                transition: 2s;
+            }
+
+            body:hover .box1{
+                transform: translateZ(800px);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1"></div>
+    </body>
+</html>

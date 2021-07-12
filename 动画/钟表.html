@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./images">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>hhh</title>
+        <style>
+             *{
+                margin: 0;
+                padding: 0;
+            }
+            .clock{
+                width: 400px;
+                height:400px;
+                margin: 100px auto;
+                background-image: url(./img/表盘1.jpeg);
+                background-size: 585px;
+                background-position-x: -92px;
+                background-position-y: -27px;
+                /* background-color: skyblue; */
+                border-radius: 50%;
+                border: 10px solid black;
+                position: relative;
+                
+            }
+
+            .clock>div{
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+            }
+
+            .hour-wrapper{
+                height: 250px;
+                width: 250px;
+                /* background-color: pink; */
+                /* z-index: 2; */
+                overflow: hidden;
+                animation: run 43200s infinite linear;
+                
+            }
+            .hour{
+                height: 125px;
+                width: 6px;
+                background-color: black;
+                margin: 0 auto;
+            }
+
+            .minute-wrapper{
+                height: 80%;
+                width: 80%;
+                /* background-color: pink; */
+                animation: runmin 3600s steps(60) infinite;
+            }
+             
+            .minute{
+                height: 50%;
+                width: 5px;
+                background-color: black;
+                margin:  0 auto;
+                
+            }
+
+            .second-wrapper{
+                height: 95%;
+                width: 90%;
+                /* background-color: pink; */
+                animation: runsec 60s steps(60) infinite;
+
+            }
+
+            .second{
+                height: 50%;
+                width: 1px;
+                background-color: red;
+                margin:  0 auto;
+            }
+            @keyframes run {
+                from{
+                    transform: rotateZ(0);
+                }
+                to{
+                    transform: rotateZ(360deg);
+                }
+            }
+
+            @keyframes runmin {
+                from{
+                    transform: rotateZ(0);
+                }
+                to{
+                    transform: rotateZ(360deg);
+                }
+            }
+            @keyframes runsec {
+                from{
+                    transform: rotateZ(0);
+                }
+                to{
+                    transform: rotateZ(360deg);
+                }
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="clock">
+            <!-- create hourhand -->
+            <div class="hour-wrapper">
+                <div class="hour"></div>
+            </div>
+            <!-- create minutehand -->
+            <div class="minute-wrapper">
+                <div class="minute"></div>
+            </div>
+            <!-- create secondhand -->
+            <div class="second-wrapper">
+                <div class="second"></div>
+            </div>
+        </div>
+    </body>
+</html>

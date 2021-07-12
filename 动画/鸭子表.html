@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./images">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>hhh</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .sec-wrapper{
+                width: 400px;
+                height:400px;
+                margin: 200px auto;
+                animation: run 60s;
+                /* background-color: skyblue; */
+                border-radius: 50%;
+                border: 10px solid black;
+            }
+            .sec{
+                height: 200px;
+                width: 4px;
+                background-color: red;
+                margin: 0 auto;
+                /* transform: rotateZ(45deg); */
+                
+                transition: 1s;
+                /* animation: block 160s infinite; */
+            }
+
+            @keyframes run {
+                from{
+                    transform: rotateZ(0);
+                }
+                to{
+                    transform: rotateZ(360deg);
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="sec-wrapper">
+        <div class="sec">
+
+        </div>
+        </div>
+    </body>
+</html>
